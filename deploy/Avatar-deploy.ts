@@ -5,7 +5,7 @@ dotenv.config(); // Load environment variables from .env file
 
 async function main() {
     const Avatar = await ethers.getContractFactory('Avatar');
-    const avatar = await Avatar.deploy('0xe5b5cF4E9a6ADfe3287647184b44c15Ff5E7E4ab');
+    const avatar = await Avatar.deploy('0xAe5B5512AaE8E03E48421BA944Ce0Aa9E514633E', 'Arborg', 'ARB');
 
     await avatar.deployed();
     console.log(
@@ -21,3 +21,4 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
+// The avatar contract address is 0x23816d996ac25B8eB130E713b79DD409db4A5944
