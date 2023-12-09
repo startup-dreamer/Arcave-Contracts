@@ -32,14 +32,6 @@ interface ICoreController {
     error EmptySymbol();
     error AvatarAlreadyMinted();
 
-    struct UserInfo {
-        uint256 x;
-        uint256 y;
-        uint256 z;
-        uint256 userMaxScore;
-        address[4] friends;
-    }
-
     /**
      * ========================================================= *
      *                   Public Function                      *
@@ -69,7 +61,7 @@ interface ICoreController {
     function fetchUserMetadata(address user_)
         external
         view
-        returns (string memory avatarMetadata, string[] memory itemMetadata, uint256 maxScore, address[4] memory friends, UserInfo memory userInfo);
+        returns (string memory avatarMetadata, string[] memory itemMetadata, uint256 x, uint256 y, uint256 z, uint256 maxUserScore, address[4] memory friends);
     function listOnMarketplace(uint256 itemNum_, uint256 price_) external;
     function removeFromMarketplace(uint256 itemNum_) external;
     function purchaseItem(uint256 itemNum_) external payable;

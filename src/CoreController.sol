@@ -37,6 +37,14 @@ contract CoreController is ICoreController, Ownable {
         string itemName; // Name of the item
     }
 
+    struct UserInfo {
+        uint256 x;
+        uint256 y;
+        uint256 z;
+        uint256 userMaxScore;
+        address[4] friends;
+    }
+
     mapping(uint256 => ItemOnMarketplace) public itemNumToItem; // Mapping of item number to item details
     mapping(address => address[]) public creatorToItemAddresses; // Mapping of creator address to their item addresses
     mapping(address => bool) public alreadyAvatarMinted;
@@ -189,6 +197,8 @@ contract CoreController is ICoreController, Ownable {
      * @param name_ The name of the tokens
      * @param symbol_ The symbol of the tokens
      */
+
+     ////////////////////////////////////
     function mint(address owner_, uint256 amount_, string memory name_, string memory symbol_) public onlyOwner {
         if (owner_ == address(0)) revert InvalidOwnerAddress();
         if (amount_ == 0) revert InvalidTotalSupply();
@@ -206,6 +216,7 @@ contract CoreController is ICoreController, Ownable {
      * @param name_ The name of the tokens
      * @param symbol_ The symbol of the tokens
      */
+     /////////////////////////////////////////////////////
     function burn(address owner_, uint256 amount_, string memory name_, string memory symbol_) public onlyOwner {
         if (owner_ == address(0)) revert InvalidOwnerAddress();
         if (amount_ == 0) revert InvalidTotalSupply();
@@ -236,7 +247,7 @@ contract CoreController is ICoreController, Ownable {
     function fetchUserMetadata(address user_)
         public
         view
-        returns (string memory avatarMetadata, string[] memory itemMetadata, uint256 maxScore, address[4] memory friends, UserInfo memory userInfo)
+        returns (string memory avatarMetadata, string[] memory itemMetadata,  uint256 x, uint256 y, uint256 z, uint256 maxUserScore, address[4] memory friends)
     {
         avatarMetadata = IAvatar(avatarContract).fetchUserAvatar(user_);
         address[] memory itemAddresses = creatorToItemAddresses[user_];
@@ -249,7 +260,12 @@ contract CoreController is ICoreController, Ownable {
             string memory json = _item.fetchUserItems(tokenId);
             itemMetadata[i] = json;
         }
-        userInfo = userUserInfo[user_];
+        x = userUserInfo[user_].x;
+        y = userUserInfo[user_].y;
+        z = userUserInfo[user_].z;
+        maxUserScore = userUserInfo[user_].userMaxScore;
+        friends = userUserInfo[user_].friends;
+
     }
 
     function setAvatarContract(address avatarContract_) public onlyOwner {

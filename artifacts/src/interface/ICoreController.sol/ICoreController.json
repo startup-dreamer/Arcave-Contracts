@@ -291,45 +291,28 @@
         },
         {
           "internalType": "uint256",
-          "name": "maxScore",
+          "name": "x",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "y",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "z",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxUserScore",
           "type": "uint256"
         },
         {
           "internalType": "address[4]",
           "name": "friends",
           "type": "address[4]"
-        },
-        {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "x",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "y",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "z",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "userMaxScore",
-              "type": "uint256"
-            },
-            {
-              "internalType": "address[4]",
-              "name": "friends",
-              "type": "address[4]"
-            }
-          ],
-          "internalType": "struct ICoreController.UserInfo",
-          "name": "userInfo",
-          "type": "tuple"
         }
       ],
       "stateMutability": "view",
