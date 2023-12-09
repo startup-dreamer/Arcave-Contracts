@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.15;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
@@ -130,5 +130,11 @@ contract Avatar is ERC721URIStorage, IAvatar {
         uint256 _tokenId = userMintedToekn[user_];
         _setTokenURI(_tokenId, tokenURI_);
         avatarAttributes[user_] = avatarAttribute_;
+    }
+
+    function transfer(address from_, address to_, uint256 tokenId_) public override onlyController {
+        userMintedToekn[to_] = tokenId_;
+        delete userMintedToekn[from_];
+        super.transfer(from_, to_, tokenId_);
     }
 }

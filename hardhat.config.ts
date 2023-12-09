@@ -8,7 +8,6 @@ import { HardhatUserConfig, task } from "hardhat/config";
 
 dotenv.config();
 
-import example from "./tasks/example";
 
 function getRemappings() {
   return fs
@@ -17,8 +16,6 @@ function getRemappings() {
     .filter(Boolean)
     .map((line) => line.trim().split("="));
 }
-
-task("example", "Example task").setAction(example);
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -109,7 +106,7 @@ const config: HardhatUserConfig = {
             network: "mantleTest",
             chainId: 5001,
             urls: {
-            apiURL: "https://testnet.mantlescan.org/api",
+            apiURL: "https://testnet.mantlescan.org/DXAJD7RXBKZIGXE9XIIH6Z9WYPPW26CEG7",
             browserURL: "https://testnet.mantlescan.org/"
             }
         }
