@@ -124,22 +124,20 @@ Arcave introduces the Arverse, a user-friendly metaverse addressing various chal
 
 <div align="center">
 
-### NFT
+### Home Page
 
-![NFT](./assets/recipt.png)
+![NFT](./assets/p2.png)
 
+### Open World
 
-### Portfolio
+![NFT](./assets/p3.png)
 
-![Protfolio](./assets/porfolio.png)
+### Shooting Game
 
-### Lending/Borrowing Market
+![NFT](./assets/p8.png)
 
-![Lending](./assets/lander.png)
-
-### Create Offer
-
-![Offer](./assets/createoffer.png)
+### Shooting Game
+![NFT](./assets/p9.png)
 
 </div>
 
