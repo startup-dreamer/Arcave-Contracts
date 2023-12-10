@@ -27,6 +27,7 @@ Step into an expansive open-world gaming metaverse on L2,  boasting low latency 
 - [Technolgies Used](#technolgies-used)
 - [Built With](#built-with)
 - [Screenshots](#demo-screenshots)
+- [HotKeys](#hotkeys)
 - [Todos](#todos)
 - [Challenges](#challenges-we-ran-into)
 - [Contributing](#contributing)
@@ -141,6 +142,19 @@ Arcave introduces the Arverse, a user-friendly metaverse addressing various chal
 ![Offer](./assets/createoffer.png)
 
 </div>
+
+## Hotkeys
+
+|Key| Action |
+|-----------|--|
+|      Space     | Jump |
+| Shift | Sprint
+| W | Forward
+| S | Backward
+| A | Move Sideward
+| D | Move Sideward
+
+
 
 ## TODOs
 - [x] Open Arverse
