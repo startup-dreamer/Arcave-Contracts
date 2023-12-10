@@ -8,7 +8,6 @@ import { HardhatUserConfig, task } from "hardhat/config";
 
 dotenv.config();
 
-
 function getRemappings() {
   return fs
     .readFileSync("remappings.txt", "utf8")

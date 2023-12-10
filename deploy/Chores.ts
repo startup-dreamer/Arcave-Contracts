@@ -10,7 +10,7 @@ async function main() {
     const tx1 = await corecontroller.setArcaveTokenContract(ARCAVETOKEN);
     await tx1.wait();
 
-    const corecontroller = await ethers.getContractAt('CoreController', CORECONTROLLER);
+    // const corecontroller = await ethers.getContractAt('CoreController', CORECONTROLLER);
 
     // const tx = await corecontroller.fetchUserMetadata('user');
     // console.log(tx);
