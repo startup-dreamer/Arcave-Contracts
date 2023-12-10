@@ -12,7 +12,7 @@ Step into an expansive open-world gaming metaverse on L2,  boasting low latency 
     <a href="https://github.com/startup-dreamer/Arcave-Contracts/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">Try it out</a>
+    <a href="https://eth-india-2023.vercel.app/">Try it out</a>
     ·
     <a href="https://github.com/startup-dreamer/Arcave-Contracts/issues">Report Bug</a>
     ·
